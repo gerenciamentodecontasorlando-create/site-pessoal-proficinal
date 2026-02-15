@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dr. Orlando Abreu — Cirurgia Buco-Maxilo-Facial</title>
+  <meta name="description" content="Dr. Orlando Abreu Gomes da Silva — Cirurgia e Traumatologia Buco-Maxilo-Facial. Atendimento e contato via WhatsApp." />
+
+  <style>
+    :root{
+      --bg: #f6fbff;
+      --card: rgba(255,255,255,.78);
+      --stroke: rgba(15, 60, 100, .12);
+      --text: #0b1b2b;
+      --muted: rgba(11,27,43,.68);
+      --blue: #38bdf8;      /* azul celeste */
+      --blue2:#60a5fa;      /* variação */
+      --shadow: 0 18px 45px rgba(2, 30, 60, .12);
+      --radius: 18px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica;
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(56,189,248,.22), transparent 55%),
+        radial-gradient(900px 500px at 90% 10%, rgba(96,165,250,.18), transparent 55%),
+        linear-gradient(180deg, #ffffff, var(--bg));
+      color: var(--text);
+      min-height:100vh;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+
+    .wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.6);
+      border-radius: 14px;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+    .brand .dot{
+      width: 12px; height:12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--blue), var(--blue2));
+      box-shadow: 0 0 0 6px rgba(56,189,248,.18);
+    }
+    .brand small{
+      display:block;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0;
+      margin-top: 2px;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+
+    .btn{
+      border: 1px solid rgba(56,189,248,.35);
+      background: linear-gradient(135deg, rgba(56,189,248,.18), rgba(96,165,250,.12));
+      color: #07324d;
+      padding: 11px 14px;
+      border-radius: 12px;
+      font-weight: 750;
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      white-space: nowrap;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(56,189,248,.15);
+      background: linear-gradient(135deg, rgba(56,189,248,.26), rgba(96,165,250,.16));
+    }
+    .btn.primary{
+      border: 0;
+      color: white;
+      background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+      box-shadow: 0 16px 34px rgba(14,165,233,.25);
+    }
+    .btn.primary:hover{
+      box-shadow: 0 20px 40px rgba(59,130,246,.28);
+    }
+
+    .hero{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-left{
+      padding: 22px;
+      position: relative;
+      overflow:hidden;
+    }
+    .hero-left:before{
+      content:"";
+      position:absolute;
+      inset:-60px -80px auto auto;
+      width: 240px;
+      height: 240px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, rgba(56,189,248,.35), transparent 60%);
+      filter: blur(0px);
+      pointer-events:none;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color: rgba(7,50,77,.82);
+      font-weight: 800;
+      background: rgba(56,189,248,.14);
+      border: 1px solid rgba(56,189,248,.22);
+      padding: 8px 12px;
+      border-radius: 999px;
+    }
+
+    h1{
+      margin: 12px 0 8px;
+      font-size: clamp(24px, 3.2vw, 36px);
+      line-height: 1.12;
+      letter-spacing: -0.6px;
+    }
+    .subtitle{
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.55;
+    }
+
+    .grid-badges{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .badge{
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(11,27,43,.10);
+      background: rgba(255,255,255,.6);
+    }
+    .badge strong{
+      display:block;
+      font-size: 13.5px;
+      margin-bottom: 4px;
+    }
+    .badge span{
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height:1.3;
+    }
+
+    .hero-right{
+      padding: 18px;
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+    }
+
+    .profile{
+      display:flex;
+      gap: 14px;
+      align-items:center;
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(11,27,43,.10);
+      background: rgba(255,255,255,.55);
+    }
+
+    .avatar{
+      width: 96px;
+      height: 96px;
+      border-radius: 18px;
+      overflow:hidden;
+      border: 1px solid rgba(56,189,248,.30);
+      box-shadow: 0 16px 30px rgba(2, 30, 60, .12);
+      flex: 0 0 auto;
+      background: #eaf6ff;
+    }
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
+    .profile h2{
+      margin: 0;
+      font-size: 18px;
+      letter-spacing:-0.2px;
+    }
+    .profile p{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 13.8px;
+      line-height:1.35;
+    }
+
+    .contact{
+      display:grid;
+      gap: 10px;
+    }
+    .line{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(11,27,43,.10);
+      background: rgba(255,255,255,.55);
+    }
+    .icon{
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      display:grid;
+      place-items:center;
+      background: rgba(56,189,248,.16);
+      border: 1px solid rgba(56,189,248,.20);
+      flex: 0 0 auto;
+      font-size: 16px;
+    }
+    .line strong{
+      display:block;
+      font-size: 13.4px;
+    }
+    .line span{
+      display:block;
+      color: var(--muted);
+      font-size: 13.4px;
+      margin-top: 2px;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    .section{
+      margin-top: 18px;
+      padding: 20px;
+    }
+    .section h3{
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing:-0.2px;
+    }
+    .section p{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14.8px;
+    }
+
+    .faq{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    details{
+      border: 1px solid rgba(11,27,43,.10);
+      background: rgba(255,255,255,.6);
+      border-radius: 16px;
+      padding: 12px 14px;
+      transition: transform .12s ease;
+    }
+    details:hover{ transform: translateY(-1px); }
+    summary{
+      cursor:pointer;
+      font-weight: 800;
+      color: rgba(7,50,77,.92);
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+    }
+    summary::-webkit-details-marker { display:none; }
+    summary:after{
+      content:"＋";
+      font-weight: 900;
+      color: rgba(56,189,248,.95);
+      font-size: 18px;
+    }
+    details[open] summary:after{ content:"—"; }
+    details .ans{
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14.4px;
+    }
+
+    footer{
+      margin-top: 22px;
+      color: rgba(11,27,43,.55);
+      font-size: 13px;
+      text-align:center;
+      padding: 14px 8px;
+    }
+
+    @media (max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
+      .grid-badges{ grid-template-columns: 1fr; }
+      .faq{ grid-template-columns: 1fr; }
+      .actions{ justify-content: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <div>
+          Dr. Orlando Abreu
+          <small>Cirurgia e Traumatologia Buco-Maxilo-Facial • Belém/PA</small>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="#sobre">Sobre</a>
+        <a class="btn" href="#duvidas">Dúvidas</a>
+        <a class="btn primary" id="btnWhats" href="#" target="_blank" rel="noopener">
+          💬 Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="card hero-left">
+        <div class="kicker">⚡ Perfil Profissional • Saúde, Tecnologia e Inovação</div>
+
+        <h1>Orlando Abreu Gomes da Silva</h1>
+        <p class="subtitle">
+          Atuação com foco em <strong>Cirurgia e Traumatologia Buco-Maxilo-Facial</strong>,
+          integrando prática clínica, formação médica e visão tecnológica. Fundador da startup
+          <strong>BTX TECH BAIXO TOCANTINS</strong>.
+        </p>
+
+        <div class="grid-badges">
+          <div class="badge">
+            <strong>Odontologia</strong>
+            <span>Graduado em 2010 pelo CESUPA.</span>
+          </div>
+          <div class="badge">
+            <strong>Especialização</strong>
+            <span>Cirurgia e Traumatologia Buco-Maxilo-Facial (UFPA).</span>
+          </div>
+          <div class="badge">
+            <strong>Pós-graduações</strong>
+            <span>Saúde Coletiva (Faculdade de São Paulo) • Pós-graduando em Patologia.</span>
+          </div>
+          <div class="badge">
+            <strong>Formação em andamento</strong>
+            <span>Medicina (AFYA) • Eng. da Computação e Análise de Sistemas (FATECIE).</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card hero-right">
+        <div class="profile">
+          <div class="avatar">
+            <!-- ✅ Coloque sua foto na mesma pasta do index.html com o nome: orlando.jpg -->
+            <img src="orlando.jpg" alt="Foto do Dr. Orlando Abreu" />
+          </div>
+          <div>
+            <h2>Dr. Orlando Abreu</h2>
+            <p>
+              Belém, Pará — Brasil<br/>
+              Cirurgia Buco-Maxilo-Facial • Traumas • Urgências • Planejamento Cirúrgico
+            </p>
+          </div>
+        </div>
+
+        <div class="contact" id="contato">
+          <div class="line">
+            <div class="icon">📞</div>
+            <div>
+              <strong>Telefones</strong>
+              <span>(91) 99987-3835 • (91) 99298-0333</span>
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="icon">✉️</div>
+            <div>
+              <strong>E-mail</strong>
+              <span>orlandodentista@outlook.com</span>
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="icon">📍</div>
+            <div>
+              <strong>Localização</strong>
+              <span>Belém — Pará — Brasil</span>
+            </div>
+          </div>
+
+          <a class="btn primary" id="btnWhats2" href="#" target="_blank" rel="noopener">
+            💬 Abrir conversa no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card section" id="sobre">
+      <h3>Sobre</h3>
+      <p>
+        Minha trajetória une <strong>Odontologia</strong>, <strong>cirurgia buco-maxilo-facial</strong>,
+        <strong>saúde coletiva</strong> e formação contínua em <strong>medicina</strong> e <strong>tecnologia</strong>.
+        A ideia é simples e poderosa: entregar cuidado clínico de alto nível com mentalidade de inovação — do consultório ao digital.
+      </p>
+    </div>
+
+    <div class="faq" id="duvidas">
+      <details>
+        <summary>O que é cirurgia buco-maxilo-facial?</summary>
+        <div class="ans">
+          É a área que atua no diagnóstico e tratamento cirúrgico de condições que envolvem
+          boca, face e ossos da face: traumas, fraturas, infecções, dentes inclusos complexos,
+          lesões, deformidades e reconstruções.
+        </div>
+      </details>
+
+      <details>
+        <summary>Quando devo procurar um buco-maxilo?</summary>
+        <div class="ans">
+          Em casos de <strong>trauma facial</strong> (batida, fratura, corte), dor intensa com limitação de abertura,
+          suspeita de <strong>infecção</strong>, dentes inclusos com complicação, alterações em ATM,
+          nódulos/lesões persistentes, ou quando o caso cirúrgico exige planejamento avançado.
+        </div>
+      </details>
+
+      <details>
+        <summary>Trauma no queixo pode causar dor na ATM e cabeça?</summary>
+        <div class="ans">
+          Pode, sim. Impactos no mento podem gerar sobrecarga na articulação temporomandibular,
+          musculatura mastigatória e até desencadear cefaleia tensional. O ideal é avaliação clínica
+          e, se indicado, exames de imagem para descartar lesões estruturais.
+        </div>
+      </details>
+
+      <details>
+        <summary>Cirurgia de siso “difícil” entra com buco-maxilo?</summary>
+        <div class="ans">
+          Quando há dente incluso profundo, risco de nervo, proximidade com seio maxilar, infecção recorrente,
+          ou anatomia complexa, o buco-maxilo costuma ser a melhor rota por segurança e previsibilidade.
+        </div>
+      </details>
+
+      <details>
+        <summary>Quais sinais de alerta em infecções odontogênicas?</summary>
+        <div class="ans">
+          Febre, aumento rápido do inchaço, dor intensa, dificuldade de engolir/respirar,
+          trismo importante (não consegue abrir a boca) e mal-estar geral são sinais de gravidade.
+          Nesses casos, a avaliação deve ser imediata.
+        </div>
+      </details>
+
+      <details>
+        <summary>Vocês fazem planejamento cirúrgico com tecnologia?</summary>
+        <div class="ans">
+          Sim — quando aplicável, uso de organização digital e raciocínio estruturado para melhorar o
+          planejamento e a comunicação do caso (inclusive com visão de evolução para soluções da BTX TECH).
+        </div>
+      </details>
+    </div>
+
+    <footer>
+      © <span id="year"></span> • Dr. Orlando Abreu Gomes da Silva • BTX TECH BAIXO TOCANTINS
+    </footer>
+  </div>
+
+  <script>
+    // ========= WHATSAPP =========
+    // Telefones informados:
+    // (91) 99987-3835 / (91) 99298-0333
+    // O link do WhatsApp usa DDI do Brasil: 55 + DDD + número (sem espaços/traços)
+    const phone1 = "5591999873835"; // principal
+    const msg = encodeURIComponent("Olá, Dr. Orlando! Vim pelo seu site e gostaria de atendimento/orientação.");
+    const waLink = `https://wa.me/${phone1}?text=${msg}`;
+
+    document.getElementById("btnWhats").href = waLink;
+    document.getElementById("btnWhats2").href = waLink;
+
+    // ========= ANO =========
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
